@@ -2,18 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 interface HeaderProps {
-  showNav: boolean;
+  hideNav: boolean;
 }
 
 export const Header = (props: HeaderProps) => {
-  const { showNav } = props;
+  const { hideNav } = props;
 
   return (
     <header>
       <h1 className="logo">
         <Link to="/">baker's point</Link>
       </h1>
-      {showNav && (
+      {!hideNav && (
         <>
           <nav className="navigation">
             <ul>
