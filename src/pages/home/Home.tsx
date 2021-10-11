@@ -7,6 +7,7 @@ export const Home = () => {
     <>
       <Carousel></Carousel>
       <Order></Order>
+      {/* here goes main page */}
     </>
   );
 };
