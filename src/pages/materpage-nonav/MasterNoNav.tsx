@@ -4,7 +4,6 @@ import { Header } from "../../components/shared/Header";
 import { Login } from "../../pages/login/Login";
 
 import {
-  BrowserRouter as Router,
   Route,
   Switch,
   useRouteMatch,
@@ -17,13 +16,11 @@ export const MasterNoNav = () => {
   return (
     <>
       <Header showNav={false}></Header>
-      <Router>
         <Switch>
           <Route path={path} exact component={Login}></Route>
           <Route path={`${path}/login`} component={Login}></Route>
           <Route path={`${path}/register`} component={Register}></Route>
         </Switch>
-      </Router>
       <Footer></Footer>
     </>
   );

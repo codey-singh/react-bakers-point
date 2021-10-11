@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Switch, useRouteMatch } from "react-router-dom";
+import { Footer } from "../../components/shared/Footer";
 import { Header } from "../../components/shared/Header";
 import { AboutUs } from "../about-us/AboutUs";
 import { ContactUs } from "../contact-us/ContactUs";
@@ -8,8 +9,7 @@ import { Home } from "../home/Home";
 import { Products } from "../products/Products";
 
 export const Master = () => {
-  const { path } = useRouteMatch();
-
+  let { path } = useRouteMatch();
   return (
     <>
       <Header showNav={true}></Header>
@@ -21,6 +21,7 @@ export const Master = () => {
         <Route path={`${path}/contact-us`} component={ContactUs}></Route>
         <Route path={`${path}/home`} component={Home}></Route>
       </Switch>
+      <Footer></Footer>
     </>
   );
 };
