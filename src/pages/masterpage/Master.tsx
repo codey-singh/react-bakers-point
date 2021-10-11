@@ -17,11 +17,9 @@ export const Master = (props: MasterProps) => {
     <>
       <Header hideNav={hideNav}></Header>
       <Switch>
-      <Switch>
         {routes.map((route: InternalRoute, i) => (
           <RouteWithSubRoutes key={i} {...route} />
         ))}
-      </Switch>
       </Switch>
       <Footer></Footer>
     </>
