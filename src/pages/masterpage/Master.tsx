@@ -17,6 +17,7 @@ export const Master = () => {
           <Route path="/faq" component={Faqs}></Route>
           <Route path="/products" component={Products}></Route>
           <Route path="/contact-us" component={ContactUs}></Route>
+          <Route path="/home" component={Home}></Route>
           <Route path="/" component={Home}></Route>
         </Switch>
       </Router>
