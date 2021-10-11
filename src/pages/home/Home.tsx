@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Carousel } from "../../components/shared/Carousel";
+import { Order } from "../../components/shared/Order";
 
 export const Home = () => {
   return (
-    <div>
-      Home Page
-    </div>
-  )
-}
+    <>
+      <Carousel></Carousel>
+      <Order></Order>
+    </>
+  );
+};
