@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
   showNav: boolean;
@@ -10,31 +11,31 @@ export const Header = (props: HeaderProps) => {
   return (
     <header>
       <h1 className="logo">
-        <a href="index.html">baker's point</a>
+        <Link to="/">baker's point</Link>
       </h1>
       {showNav && (
         <nav className="navigation">
           <ul>
             <li className="active">
-              <a href="index.html">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="products.html">Products</a>
+              <Link to="/products">Products</Link>
             </li>
             <li>
-              <a href="contactus.html">Contact Us</a>
+              <Link to="/contact-us">Contact Us</Link>
             </li>
             <li>
-              <a href="about.html">About Us</a>
+              <Link to="/about-us">About Us</Link>
             </li>
             <li>
-              <a href="faq.html">FAQs</a>
+              <Link to="/faqs">FAQs</Link>
             </li>
             <li>
-              <a href="login.html">Login</a>
+              <Link to="/account/login">Login</Link>
             </li>
             <li>
-              <a href="register.html">Register</a>
+              <Link to="/account/register">Register</Link>
             </li>
           </ul>
         </nav>

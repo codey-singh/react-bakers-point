@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Register = () => {
   return (
@@ -53,7 +54,7 @@ export const Register = () => {
             </button>
           </fieldset>
           <fieldset>
-            <a href="login.html">Already a user?</a>
+            <Link to="/account/login">Already a user?</Link>
           </fieldset>
         </form>
       </div>
