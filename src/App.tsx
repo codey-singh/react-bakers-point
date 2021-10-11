@@ -4,7 +4,7 @@ import { Master } from "./pages/masterpage/Master";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { MasterNoNav } from "./pages/materpage-nonav/MasterNoNav";
 
-function App() {
+export const App = () => {
   return (
     <Router>
       <Switch>
@@ -13,6 +13,4 @@ function App() {
       </Switch>
     </Router>
   );
-}
-
-export default App;
+};
