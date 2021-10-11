@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Faq = () => {
+export const Faqs = () => {
   return (
     <main id="wrapper">
       <button className="accordion">Where are you located?</button>
