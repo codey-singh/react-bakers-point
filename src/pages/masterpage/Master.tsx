@@ -1,8 +1,9 @@
 import React from "react";
 import { Switch } from "react-router-dom";
-import { InternalRoute, RouteWithSubRoutes } from "../../App";
 import { Footer } from "../../components/shared/Footer";
 import { Header } from "../../components/shared/Header";
+import { InternalRoute } from "../../Routes/Routes";
+import { RouteWithSubRoutes } from "../../Routes/RouteWithSubRoutes";
 
 
 interface MasterProps {
