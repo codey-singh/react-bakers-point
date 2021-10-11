@@ -1,11 +1,16 @@
-import React from 'react'
-import { Footer } from '../../components/shared/Footer'
-import {Header} from '../../components/shared/Header'
-import { Login } from '../../pages/login/Login';
+import React from "react";
+import { Footer } from "../../components/shared/Footer";
+import { Header } from "../../components/shared/Header";
+import { Login } from "../../pages/login/Login";
 
-import { BrowserRouter as Router, Route, Switch, useRouteMatch } from 'react-router-dom';
-import { Home } from '../home/Home';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useRouteMatch,
+} from "react-router-dom";
 
+import { Register } from "../register/Register";
 
 export const MasterNoNav = () => {
   let { path } = useRouteMatch();
@@ -16,10 +21,10 @@ export const MasterNoNav = () => {
         <Switch>
           <Route path={path} exact component={Login}></Route>
           <Route path={`${path}/login`} component={Login}></Route>
-          <Route path={`${path}/register`} component={Home}></Route>
+          <Route path={`${path}/register`} component={Register}></Route>
         </Switch>
       </Router>
       <Footer></Footer>
     </>
-  )
-}
+  );
+};
