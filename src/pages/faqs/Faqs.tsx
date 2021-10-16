@@ -1,70 +1,52 @@
 import React from "react";
+import { AccordionWidget, AccordionWidgetProps } from "../../components/shared/AccordionWidget";
+
+const faqs: AccordionWidgetProps[] = [
+  {
+    heading: 'Where are you located?',
+    content: '564,Mainland Imaginary Road, Hometown, Canada.'
+  },
+  {
+    heading: 'What are your working hours?',
+    content: 'We are open all seven days 10am to 9pm.'
+  },
+  {
+    heading: 'What are your payment methods?',
+    content: 'We accept cash and cards.'
+  },
+  {
+    heading: 'What kinds of products do you sell?',
+    content: 'Yes, we do wedding cakes but only on preordering.'
+  },
+  {
+    heading: 'What is the minimum order for custom cupcakes?',
+    content: 'Custom cupcakes can be done with a minimum order of 2 dozens.'
+  },
+  {
+    heading: 'Can I put something on hold?',
+    content: 'Yes, with advance payment of 50%.'
+  },
+  {
+    heading: 'How early do we have to order for large parties?',
+    content: 'About one to two weeks is recommended.'
+  },
+  {
+    heading: 'Do you deliver?',
+    content: 'Yes, within 5-10km around the store.'
+  },
+  {
+    heading: 'Do you have cakes ready for purchase in the store?',
+    content: 'Yes, we have fresh items daily in the store.'
+  },
+];
 
 export const Faqs = () => {
   return (
     <main id="wrapper">
-      <button className="accordion">Where are you located?</button>
-      <div className="panel">
-        <p>564,Mainland Imaginary Road, Hometown, Canada.</p>
-      </div>
-
-      <button className="accordion">What are your working hours?</button>
-      <div className="panel">
-        <p>We are open all seven days 10am to 9pm.</p>
-      </div>
-
-      <button className="accordion">What are your payment methods?</button>
-      <div className="panel">
-        <p>We accept cash and cards.</p>
-      </div>
-      <button className="accordion">What kinds of products do you sell?</button>
-      <div className="panel">
-        <p>We have varieties of cakes, cupcakes and cookies.</p>
-      </div>
-
-      <button className="accordion">Are your products customizable?</button>
-      <div className="panel">
-        <p>Yes, we provide different customize options.</p>
-      </div>
-
-      <button className="accordion">Do you make wedding cakes?</button>
-      <div className="panel">
-        <p>Yes, we do wedding cakes but only on preordering.</p>
-      </div>
-      <button className="accordion">
-        What is the minimum order for custom cupcakes?
-      </button>
-      <div className="panel">
-        <p>Custom cupcakes can be done with a minimum order of 2 dozens.</p>
-      </div>
-
-      <button className="accordion">Can I put something on hold?</button>
-      <div className="panel">
-        <p>Yes, with advance payment of 50%.</p>
-      </div>
-
-      <button className="accordion">
-        How early do we have to order for large parties?
-      </button>
-      <div className="panel">
-        <p>About one to two weeks is recommended.</p>
-      </div>
-      <button className="accordion">Do you have any eggless options?</button>
-      <div className="panel">
-        <p>Yes we have eggless cake options also.</p>
-      </div>
-
-      <button className="accordion">Do you deliver?</button>
-      <div className="panel">
-        <p>Yes within 5-10km around the store.</p>
-      </div>
-
-      <button className="accordion">
-        Do you have cakes ready for purchase in the store?
-      </button>
-      <div className="panel">
-        <p>Yes we have fresh items daily in the store.</p>
-      </div>
+      {faqs.map((faq, i) => (
+        <AccordionWidget key={i} heading={faq.heading} content={faq.content}></AccordionWidget>
+      ))
+      }
     </main>
   );
 };
